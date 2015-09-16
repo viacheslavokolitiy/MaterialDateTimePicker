@@ -21,10 +21,12 @@ import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.format.DateUtils;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -296,7 +298,9 @@ public class DatePickerDialog extends DialogFragment implements
                 dismiss();
             }
         });
-        okButton.setTypeface(TypefaceHelper.get(activity,"Roboto-Medium"));
+        okButton.setTypeface(TypefaceHelper.get(activity, "Lato-Bold"));
+        okButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        okButton.setTextColor(Color.parseColor("#11adc9"));
 
         Button cancelButton = (Button) view.findViewById(R.id.cancel);
         cancelButton.setOnClickListener(new OnClickListener() {
@@ -306,8 +310,10 @@ public class DatePickerDialog extends DialogFragment implements
                 if(getDialog() != null) getDialog().cancel();
             }
         });
-        cancelButton.setTypeface(TypefaceHelper.get(activity,"Roboto-Medium"));
+        cancelButton.setTypeface(TypefaceHelper.get(activity, "Lato-Bold"));
+        cancelButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
         cancelButton.setVisibility(isCancelable() ? View.VISIBLE : View.GONE);
+        cancelButton.setTextColor(Color.parseColor("#11adc9"));
 
         //If an accent color has not been set manually, try and get it from the context
         if (mAccentColor == -1) {
