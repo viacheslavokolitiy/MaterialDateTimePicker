@@ -71,4 +71,5 @@
 
     <!-- DO NOT TRANSLATE -->
     <string name="mdtp_day_of_week_label_typeface" translatable="false">sans-serif</string>
+    <string name="mdtp_do_it_then">I’LL DO IT THEN</string>
 </resources>

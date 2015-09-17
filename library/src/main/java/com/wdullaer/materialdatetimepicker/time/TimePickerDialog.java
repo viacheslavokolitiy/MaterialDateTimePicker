@@ -24,6 +24,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -324,7 +325,8 @@ public class TimePickerDialog extends DialogFragment implements OnValueSelectedL
             }
         });
         mOkButton.setOnKeyListener(keyboardListener);
-        mOkButton.setTypeface(TypefaceHelper.get(getDialog().getContext(), "Roboto-Medium"));
+        mOkButton.setTypeface(TypefaceHelper.get(getDialog().getContext(), "Lato-Bold"));
+        mOkButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
 
         mCancelButton = (Button) view.findViewById(R.id.cancel);
         mCancelButton.setOnClickListener(new OnClickListener() {
@@ -334,7 +336,8 @@ public class TimePickerDialog extends DialogFragment implements OnValueSelectedL
                 if(getDialog() != null) getDialog().cancel();
             }
         });
-        mCancelButton.setTypeface(TypefaceHelper.get(getDialog().getContext(),"Roboto-Medium"));
+        mCancelButton.setTypeface(TypefaceHelper.get(getDialog().getContext(), "Lato-Bold"));
+        mCancelButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
         mCancelButton.setVisibility(isCancelable() ? View.VISIBLE : View.GONE);
 
         // Enable or disable the AM/PM view.
