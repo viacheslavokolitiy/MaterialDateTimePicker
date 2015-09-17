@@ -327,6 +327,7 @@ public class TimePickerDialog extends DialogFragment implements OnValueSelectedL
         mOkButton.setOnKeyListener(keyboardListener);
         mOkButton.setTypeface(TypefaceHelper.get(getDialog().getContext(), "Lato-Bold"));
         mOkButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        mOkButton.setText("i'll do it then");
 
         mCancelButton = (Button) view.findViewById(R.id.cancel);
         mCancelButton.setOnClickListener(new OnClickListener() {
